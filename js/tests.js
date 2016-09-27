@@ -60,37 +60,63 @@ tests = [
     //
     //     return backup;
     // },
+    // function (backup) {
+    //     console.log('>>>>> Test Model. Delete location from task <<<<<');
+    //
+    //     taskManager.addTask('222222', ['loc1', 'loc2']);
+    //     taskManager.deleteLocationFromTask(1, 'loc2');
+    //
+    //     return backup;
+    // },
+    // function (backup) {
+    //     console.log('>>>>> Test Model. Delete location from task. Empty locations <<<<<');
+    //
+    //     taskManager.addTask('222222', ['loc2']);
+    //     taskManager.deleteLocationFromTask(1, 'loc2');
+    //
+    //     return backup;
+    // },
+    // function (backup) {
+    //     console.log('>>>>> Test Model. Delete nonexistant-location from task  <<<<<');
+    //
+    //     taskManager.addTask('222222', ['loc2']);
+    //     taskManager.deleteLocationFromTask(1, 'loc3');
+    //
+    //     return backup;
+    // },
+    // function (backup) {
+    //     console.log('>>>>> Test Model. Delete from nonexistant-task  <<<<<');
+    //
+    //     taskManager.addTask('222222', ['loc2']);
+    //     taskManager.deleteLocationFromTask(2, 'loc3');
+    //
+    //     return backup;
+    // },
     function (backup) {
-        console.log('>>>>> Test Model. Delete location from task <<<<<');
-
-        taskManager.addTask('222222', ['loc1', 'loc2']);
-        taskManager.deleteLocationFromTask(1, 'loc2');
+        console.log('>>>>> Test Model. Distance locations  <<<<<');
+        console.log('case 1: 57.767938, 40.926925 - 57.766930, 40.924733 = 165 m');
+        console.log(geoposManager.distance(57.767938, 40.926925, 57.766930, 40.924733));
+        console.log('case 2: 57.767938, 40.926925 - 57.770823, 40.933123 = 495 m');
+        console.log(geoposManager.distance(57.767938, 40.926925, 57.770823, 40.933123));
 
         return backup;
     },
     function (backup) {
-        console.log('>>>>> Test Model. Delete location from task. Empty locations <<<<<');
-
-        taskManager.addTask('222222', ['loc2']);
-        taskManager.deleteLocationFromTask(1, 'loc2');
-
-        return backup;
-    },
-    function (backup) {
-        console.log('>>>>> Test Model. Delete nonexistant-location from task  <<<<<');
-
-        taskManager.addTask('222222', ['loc2']);
-        taskManager.deleteLocationFromTask(1, 'loc3');
+        console.log('>>>>> Test Model. Distance from current  <<<<<');
+        console.log('case: location: 57.767938, 40.926925. current: '
+            + currentLocation.latitude + ','
+            + currentLocation.longitude);
+        console.log(geoposManager.distanceFromCurrent(57.767938, 40.926925));
 
         return backup;
     },
     function (backup) {
-        console.log('>>>>> Test Model. Delete from nonexistant-task  <<<<<');
-
-        taskManager.addTask('222222', ['loc2']);
-        taskManager.deleteLocationFromTask(2, 'loc3');
-
+        console.log('>>>>> Test Model. Get current  <<<<<');
+        console.log('example: lat: 35.5830119, lng: -124.4871223, accuracy: 40');
+        geoposManager.init();
         return backup;
     }
-];
+
+]
+;
 //----------------- /TESTS ---------------------

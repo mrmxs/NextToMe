@@ -45,12 +45,11 @@
 // // });
 
 // //GEOLOCATION
-
 // function showMap(position) {
 //   currentCoords = position.coords.latitude + ',' + position.coords.longitude;
 //   // Show a map centered at (position.coords.latitude, position.coords.longitude).
 //   sendNotification(
-//     currentCoords, {
+//     currentCoords, { 
 //       body: 'Вы здесь.',
 //       icon: '214929.jpg',
 //       dir: 'auto'

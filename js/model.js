@@ -17,7 +17,14 @@ Model = {
         // else {
         //     console.log('TASK #' + task.id + ' ALREADY CONNECTED WITH LOCATION #' + locId);
         // }
-    }
+    },
+    sjkjkjkjkWatching: function () {
+    window.setTimeout(function () {
+            this.setGeolocation();
+        },
+        30000 //check every 30 seconds
+    );
+}
 };
 //----------------- /Model ---------------------
 
