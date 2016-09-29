@@ -13,6 +13,9 @@ var Task = function (id, text, locations) {
 };
 
 taskManager = {
+    getTasks: function() {
+        return tasks;
+    },
     addTask: function (text, locations) {
         var id;
         if (tasks.length === 0) {
@@ -86,6 +89,10 @@ taskManager = {
         else {
             console.log('TASKS NOT CHANGED. id NOT FOUND: ' + taskId);
         }
+    },
+    restore: function(_tasks) {
+        tasks = _tasks;
+        console.log('var "tasks" restored with value:\n' + JSON.stringify(tasks));
     }
 };
 //----------------- /Task Manager ---------------------

@@ -13,6 +13,9 @@ var Location = function (id, name, position) {
 };
 
 locationManager = {
+    getLocs: function() {
+      return locs;
+    },
     addLocation: function (name, position) {
         var id;
         if (locs.length === 0) {
@@ -44,6 +47,10 @@ locationManager = {
         } else {
             console.log('NO LOCATIONS DELETED. id NOT FOUND: ' + id);
         }
+    },
+    restore: function(_locs) {
+        locs = _locs;
+        console.log('var "locs" restored with value:\n' + JSON.stringify(locs));
     }
 };
 //----------------- /Location Manager ---------------------
