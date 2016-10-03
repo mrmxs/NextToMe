@@ -29,6 +29,9 @@ var geoposManager = {
             + 'lng: ' + currentLocation.longitude + ', '
             + 'accuracy: ' + currentLocation.accuracy);
     },
+    getCurrent: function () {
+        return currentLocation;
+    },
     distance: function (lat1, lon1, lat2, lon2) {
         var rlat1 = Math.PI * lat1 / 180;
         var rlat2 = Math.PI * lat2 / 180;

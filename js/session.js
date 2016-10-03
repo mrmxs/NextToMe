@@ -3,6 +3,8 @@
  */
 //--------------------- Session ------------------------
 
+model.initLSSession();
+
 
 tests.forEach(test => {
     var backup = test(JSON.stringify([locs, tasks]));
@@ -12,5 +14,4 @@ tests.forEach(test => {
 });
 
 
-//model.initLSSession();
 //--------------------- /Session ------------------------

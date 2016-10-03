@@ -111,19 +111,34 @@ tests = [
     //     return backup;
     // },
     // function (backup) {
+    //     console.log('>>>>> Test model. Init ls session <<<<<');
+    //     model.initLSSession();
+    //     return JSON.stringify([
+    //             locationManager.getLocs(),
+    //             taskManager.getTasks()
+    //         ]);
+    // },
+    // function (backup) {
     //     console.log('>>>>> Test model. Get current  <<<<<');
     //     console.log('example: lat: 35.5830119, lng: -124.4871223, accuracy: 40');
-    //     geoposManager.define();
+    //     geoposManager.init();
     //     return backup;
-    // }
+    // },
     function (backup) {
-        console.log('>>>>> Test model. Init ls session <<<<<');
-        model.initLSSession();
-        return JSON.stringify([
-                locationManager.getLocs(),
-                taskManager.getTasks()
-            ]);
-    }
+        console.log('>>>>> Test model. Map my position <<<<<');
+        geoposManager.init();
+        map.init();
+
+        return backup;
+    //},
+    // function (backup) {
+    //     console.log('>>>>> Test model. Update my map position <<<<<');
+    //     geoposManager.init();
+    //     map.init();
+    //     map.update();
+    //
+    //     return backup;
+     }
 
 
 ]

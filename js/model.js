@@ -41,16 +41,6 @@ model = {
                     lsLocsDefined = true;
                 }
             } while (!validJSON);
-            // if (!lsTasksDefined || !lsLocsDefined || !validJSON  ) {
-            //     lsManager.define('tasks');
-            //     tasks = taskManager.restore(JSON.parse(
-            //         lsManager.get('tasks')));
-            //
-            //     lsManager.define('locations');
-            //     locs = locationManager.restore(JSON.parse(
-            //         lsManager.get('locations')));
-            //     locationManager.addDefaultLocation();
-            // }
 
             return true;
 
